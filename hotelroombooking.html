@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Room Booking for Pravit's Resort</title>
+    <style>
+        h1, h2, h3, h4 {
+            line-height: 1.25;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        body {
+            font: 12px/135% arial, helvetica, sans-serif;
+        }
+
+        label {
+            display: block;
+        }
+
+        label, legend {
+            font-size: 14px;
+            line-height: 18px;
+            color: #4e4e4e;
+        }
+
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+<form action="connect.php" method="post">
+    <h2>Step 1: Your details</h2><br>
+    <label for="firstname"> First Name:
+        <input type="text" name="firstname" id="firstname" required autofocus
+               placeholder="Your first name"><br><br>
+    </label>
+    <label for="lastname">Last name:
+        <input type="text" name="lastname" id="lastname" required
+               placeholder="Your last name"><br><br>
+    </label>
+    <label for="email">Email address:
+        <input type="text" name="email" id="email" required
+               placeholder="Your email address"
+               pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}"
+               title="Please enter in a valid email address."><br><br>
+    </label>
+    <label for="phone">Cell phone number </label>
+    <input type="tel" name="phone" id="phone" required
+           placeholder="Your cell phone number" pattern="[0-9]{10}"
+           title="Please enter in a valid phone number in the format ##########"><br><br>
+    <label for="date">Date
+        <input type="date" name="date" id="date" min="2020-08-12">
+    </label><br><br>
+    <label for="numberOfGuests">Number of Guests:
+        <input type="number" name="numberOfGuests" id="numberOfGuests" min="1" max="6">
+    </label><br>
+    <label for="preferences">Please tell us any extra information or preferences you have about your room (maximum of 500 characters)!</label>
+        <input type="text" name="preferences" id="preferences" minlength="10" maxlength="500" placeholder="Your text here"><br><br>
+    <input type="submit">
+
+    <br><br>
+</body>
+</html>
